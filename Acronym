@@ -1,0 +1,20 @@
+Create Acronymn for given list of word such that each character in acronym should be uppercase seperated by ".", but not ending in ".". 
+If list has only one word it should return all Uppercase char from string seperated by ".", but not ending in ".". 
+
+string1=["kuch","kuch",'Hota',"Hai"]
+string2=["BaajiGar"]
+
+def acryonym(string1):
+    result=""
+    if len(string1)==1:
+        for char in string1[0]:
+            if char.isupper():
+                result+=char
+                result+="."
+    else:
+        for i  in range(len(string1)):
+            result+=str(string1[i][0]).upper()
+            result=result+"."
+    return result[:-1]
+
+acryonym(string2)
